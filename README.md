@@ -1,1 +1,1 @@
-# WikiCone
+# WikiClone
