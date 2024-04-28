@@ -5,12 +5,14 @@ const quote = ref({});
 
 const getQuotes = async () => {
   try {
-    const response = await fetch(`https://api.quotable.io/quotes/random?tags=technology,famous-quotes`);
+    const response = await fetch(
+      `https://api.quotable.io/quotes/random?tags=technology,famous-quotes`
+    );
     if (!response.ok) {
       throw new Error("Failed to fetch quote");
     }
     const data = await response.json();
-  
+
     quote.value.content = data[0].content;
     quote.value.author = data[0].author;
   } catch (error) {
@@ -19,7 +21,10 @@ const getQuotes = async () => {
 };
 
 // Call getQuotes function when component is mounted
-onMounted(getQuotes);
+onMounted(() => {
+  getQuotes();
+  setInterval(getQuotes, 5000);
+});
 
 const fetchNewQuote = () => {
   getQuotes();
@@ -34,7 +39,7 @@ const fetchNewQuote = () => {
       <cite class="quote-author">_ _{{ quote.author }}</cite>
     </blockquote>
     <button @click="fetchNewQuote" class="quote-button">
-      Get Random Quote
+      Qotes changes automatically
     </button>
   </div>
 </template>
