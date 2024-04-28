@@ -6,7 +6,7 @@ const quote = ref({});
 const getQuotes = async () => {
   try {
     const response = await fetch(
-      `https://api.quotable.io/quotes/random?tags=technology,famous-quotes`
+      `https://api.quotable.io/quotes/random?tags=technology`
     );
     if (!response.ok) {
       throw new Error("Failed to fetch quote");
@@ -39,7 +39,7 @@ const fetchNewQuote = () => {
       <cite class="quote-author">_ _{{ quote.author }}</cite>
     </blockquote>
     <button @click="fetchNewQuote" class="quote-button">
-      Qotes changes automatically
+      Wait or Click to get quote
     </button>
   </div>
 </template>
