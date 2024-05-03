@@ -1,11 +1,11 @@
 <template>
   <div>
-    <Calculator />
+    <AccordionComponent />
   </div>
 </template>
 <script setup>
 import { ref } from "vue";
-import Calculator from "./components/Calculator.vue";
+import AccordionComponent from "./components/AccordionComponent.vue";
 </script>
 <style>
 body,
