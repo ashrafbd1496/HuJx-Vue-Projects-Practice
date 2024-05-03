@@ -1,11 +1,11 @@
 <template>
   <div>
-    <AccordionComponent />
+    <FormValidation />
   </div>
 </template>
 <script setup>
 import { ref } from "vue";
-import AccordionComponent from "./components/AccordionComponent.vue";
+import FormValidation from "./components/FormValidation.vue";
 </script>
 <style>
 body,
