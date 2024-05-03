@@ -59,7 +59,7 @@ const toggleAccordion = (index) => {
 }
 
 .accordion-header {
-  background-color: #3498db;
+  background-color: rgb(39, 153, 153);
   color: #fff;
   padding: 15px;
   cursor: pointer;
