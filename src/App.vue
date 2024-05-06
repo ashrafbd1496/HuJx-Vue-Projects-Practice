@@ -1,11 +1,11 @@
 <template>
   <div>
-    <FormValidation />
+    <PasswordGenerator />
   </div>
 </template>
 <script setup>
 import { ref } from "vue";
-import FormValidation from "./components/FormValidation.vue";
+import PasswordGenerator from "./components/PasswordGenerator.vue";
 </script>
 <style>
 body,
